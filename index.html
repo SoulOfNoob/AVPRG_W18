@@ -3,7 +3,27 @@
     <head>
         <title>AVPRG_WS18 Jan Ryklikas</title>
     </head>
-    <bod>
-        It Works!
-    </bod>
+    <body>
+        <ul id="aufgaben_liste"></ul>
+    </body>
+    <script>
+        var index_url = window.location.href;
+        var aufgaben = 13;
+
+        function UrlExists(url){
+            var http = new XMLHttpRequest();
+            http.open('HEAD', url, false);
+            http.send();
+            return http.status != 404;
+        }
+
+        var html = "";
+        for(var i = 2;i <= aufgaben;i++) {
+            var url = index_url.replace('index.html', 'Aufgabe' + i + '.html');
+            if(UrlExists(url)) {
+                html = html + '<li><a href="' + url + '">Aufgabe ' + i + '</a></li>';
+            }
+        }
+        document.getElementById("aufgaben_liste").innerHTML = html;
+    </script>
 </html>
