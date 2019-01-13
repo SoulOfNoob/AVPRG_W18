@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="style.css">
+      
+        <title>Testing</title>
+    </head>
+    <body>
+        <button id="playStopButton">Play</button>
+        <button id="distortionButton">Distortion Off</button>
+        <input type="file" id="input" multiple="true">
+        <select id="list"></select>
+        <div id="gainContainer">Gain
+                <input type="range" min="0" max="40" value="0" class="slider" id="gainSlider">
+                <span id="gainOutput" class="output">0 dB</span>
+            </div>
+    
+
+        <script src="main.js"></script>
+        <script type="text/javascript" src="qwebchannel.js"></script>
+
+    </body>
+</html>
