@@ -105,7 +105,7 @@ function init(){
     masterGain.gain.value = .1;
     console.log(masterGain)
     // Load musik
-    musikURL = "musik/"
+    musikURL = "../musik/"
     sound = null;
    
     
@@ -146,7 +146,7 @@ function init(){
 document.getElementById("gainSlider").addEventListener("input", function (e) {
    
     var gainValue = (this.value / 40);
-    document.getElementById("gainOutput").innerHTML = gainValue + " dB";
+    document.getElementById("gainOutput").innerHTML = gainValue + " %";
     masterGain.gain.value = gainValue;
     console.log(masterGain)
 });
