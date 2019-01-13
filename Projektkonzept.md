@@ -68,7 +68,6 @@ Weiterhin befinden sich markierte Bereiche auf der Fläche die Noten repräsenti
 
 Zeitplan
 --------
-
 ![](https://lh3.googleusercontent.com/hosDGRpYhONH8O9levmUPlmhYf1PDrsaT8ix1aDtVwNIfTwrW4nnNJ4MJjFWFFbbc5a6IWpjdw2SqDMc6TppeezjsPICMS9__xywhsiTZwwMh1GdaMQ0LQjUtVHWbKCZtZhMFPFn)
 
 Teamplanung
