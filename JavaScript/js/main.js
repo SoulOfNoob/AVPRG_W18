@@ -188,7 +188,8 @@ function loadAudio(name){
 function toggleDistationWave(){
     if(isPlaying){
         if(!isDistortion){
-            console.log("on"); 
+            console.log("on");
+            source.disconnect();
             source.connect(distortion);
             distortion.connect(masterGain);
             masterGain.connect(context.destination);
