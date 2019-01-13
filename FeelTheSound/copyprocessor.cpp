@@ -52,6 +52,7 @@ int CopyProcessor::calibrateHue(Mat input) {
     return maxHue;
 }
 
+// ToDo: reuse this in processCurve
 int CopyProcessor::getArea(Mat input, int hue) {
     inRange(input, Scalar(hue-5, 100, 0), Scalar(hue+5, 255, 255), input);
 
@@ -134,17 +135,6 @@ Mat CopyProcessor::processCurve(Mat image, int hue, int saturation, int value, i
             }
         }
 
-        //qDebug() << "max_x: " << max_x << " min_x: " << min_x << " max_y: " << max_y << " min_y: " << min_y;
-
-        // remove frame
-        // for(int x = min_x; x <= max_x; x++){
-        //     for(int y = min_y; y <= max_y; y++){
-        //         if(x < min_x+4 || x > max_x-4 || y < min_y+4 || y > max_y-4) {
-        //             curve.at<uchar>(y, x) = 0;
-        //         }
-        //     }
-        // }
-
         Mat frameFilter;
         curve.copyTo(frameFilter);
 
@@ -200,6 +190,7 @@ Mat CopyProcessor::processCurve(Mat image, int hue, int saturation, int value, i
         filterArray[3] = curveFilter;
 
     } else {
+        // if detected area is too smoll stop further filtering
         Mat frameFilter;
         Mat curveFilter;
         filterArray[2] = frameFilter;
