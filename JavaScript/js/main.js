@@ -45,7 +45,10 @@ var allFrequencies = [
     11839.8215267723,   12543.853951415975];
 
 
-    init();
+    window.onload = function() {
+        init();
+      }
+    
 
     transmitter = null; 
 
